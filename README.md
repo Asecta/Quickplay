@@ -1,8 +1,10 @@
 # Quickplay
 
-Quickplay is a simple but general platform for managing multi-instance (and potentially multi-server) PvP games. 
+Quickplay is a simple but general platform for managing multi-instance (and potentially multi-server) minigames.  
 
 # Scope
+
+This was originally written out with the vision of team-based pvp minigames, however i have written the specs out in a generalilzed way that should be applicable to any desired gamemode. Such as spleef, parkour-racing etc.  
 
 ## **Game instances**
 
