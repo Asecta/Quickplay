@@ -14,7 +14,7 @@ Quickplay is a simple but general platform for managing multi-instance (and pote
 
 Game instances will be defined in a config file as the gamemode, the Map and additional modifiers. This includes: What game mechanics will be enabled or disabled, Configuration overrides for any given game mechanics, etc
 
-Excluding listeners, all gamemode logic and game mechanics will be ticked from the instances game loop. This would looks something like so: 
+Excluding listeners, all gamemode logic and game mechanics will be ticked from the instances game loop. This would looks something like so:
 
 ```yaml
 tick-instance:
@@ -27,7 +27,6 @@ tick-instance:
         tick-wincondition
         etc..
     etc..
-    
 ```
 
 We can consider how they will be orchestrated later.
@@ -62,8 +61,8 @@ Gamemodes will implement a common abstract class that provides a general outline
 
 A map is self-explanatory, It is a stage on which a game will run. A map must fulfil the requirements for a given game in order to be able to run that game. A map must be reusable. 
 
-Maps should be mostly defined through in-game features, such that a person running singleplayer vanilla could still create a map. I suggest using named armourstands and/or structure blocks to define where a spawn point is, or where a flag is. The gamemode will use these flags to determine if the map meets its requirements, and may also use them to make decisions about things such as team colours, flag colours etc.   
-  
+Maps should be mostly defined through in-game features, such that a person running singleplayer vanilla could still create a map. I suggest using named armourstands and/or structure blocks to define where a spawn point is, or where a flag is. The gamemode will use these flags to determine if the map meets its requirements, and may also use them to make decisions about things such as team colours, flag colours etc. 
+
 Maps will implement **game mechanics.** These will be mechanics required by the map, but may also be additional reusable mechanics at the discretion of the map builders.   
 
 ## Game Mechanics
@@ -76,10 +75,10 @@ Game mechanics are reusable components used to construct the game logic and maps
 
 A game mechanic may be a large or tiny inclusion to a given game, ranging from the team system, too a jump pad. Some examples:
 
-*   The team system 
+*   The team system
 *   Chests containing random loot
-*   Launch pads (a block that the player can stand on that will launch them in a direction)
-*   Zones that give given requirements in order to enter. For example, 'x' team cannot enter 'y' zone. 
+*   Launchpads (a block that the player can stand on that will launch them in a direction)
+*   Zones that give given requirements in order to enter. For example, 'x' team cannot enter 'y' zone.
 
 Game mechanics may be "ticked" on a frequency and may implement listeners. 
 
@@ -87,10 +86,10 @@ Game mechanics may require configuration input in order to be used. For example:
 
 The game mechanic must be able to query the game instance through a given interface. Game mechanics may also be controllable from the instance loop, and may be queryable from the instance loop. 
 
-We will provide common interfaces that can be implemented by game mechanics to make it easier and clearer to query them about their state. For example: 
+We will provide common interfaces that can be implemented by game mechanics to make it easier and clearer to query them about their state. For example:
 
 *   ICompletable: returns true or false of the requirements of the mechanic have been fulfilled
-*   IStateful: the mechanic has a state that can be queried and/or changed. 
+*   IStateful: the mechanic has a state that can be queried and/or changed.
 
 ## Building
 
