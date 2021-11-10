@@ -1,3 +1,4 @@
 name: Quickplay
 main: com.pandoaspen.quickplay.QuickplayPlugin
 version: 1.0
+api-version: 1.16
