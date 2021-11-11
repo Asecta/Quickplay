@@ -7,6 +7,4 @@ import java.util.Set;
 
 public class GameManager {
 
-    private Map<String, >
-
 }
