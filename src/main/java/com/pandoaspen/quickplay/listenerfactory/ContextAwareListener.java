@@ -1,9 +1,8 @@
 package com.pandoaspen.quickplay.listenerfactory;
 
-public class ContextAwareListener {
+import org.bukkit.event.Listener;
 
-
-
+public interface ContextAwareListener extends Listener {
 }
 
 

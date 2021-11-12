@@ -3,12 +3,14 @@ package com.pandoaspen.quickplay.game.instances;
 import com.pandoaspen.quickplay.QuickplayPlugin;
 import com.pandoaspen.quickplay.game.gamemodes.IGamemode;
 import com.pandoaspen.quickplay.game.maps.IMap;
+import com.pandoaspen.quickplay.listenerfactory.ContextAwareListener;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.World;
+import org.bukkit.event.Listener;
 
 @RequiredArgsConstructor
-public class GameInstance {
+public class GameInstance implements ContextAwareListener {
 
     @Getter private final QuickplayPlugin plugin;
     @Getter private final IGamemode gamemode;
@@ -20,7 +22,6 @@ public class GameInstance {
     public void tick() {
 
     }
-
 
     @Override
     public String toString() {
