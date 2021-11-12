@@ -20,14 +20,18 @@ compileJava {
     options.forkOptions.executable = 'javac'
 }
 
+/* TEST DEPENDENCIES */
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
     compileOnly 'io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT'
 
-    implementation 'co.aikar:acf-paper:0.5.0-SNAPSHOT'
+    // implementation 'co.aikar:acf-paper:0.5.0-SNAPSHOT'
+}
 
+/* TEST DEPENDENCIES */
+dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
@@ -36,8 +40,8 @@ dependencies {
 
 shadowJar {
     minimize()
-    relocate 'co.aikar.commands', 'com.pandoaspen.quickplay.libs.acf'
-    relocate 'co.aikar.locales', 'com.pandoaspen.quickplay.libs.locales'
+    // relocate 'co.aikar.commands', 'com.pandoaspen.quickplay.libs.acf'
+    // relocate 'co.aikar.locales', 'com.pandoaspen.quickplay.libs.locales'
     archiveFileName = "Quickplay-${project.version}.jar"
 }
 
