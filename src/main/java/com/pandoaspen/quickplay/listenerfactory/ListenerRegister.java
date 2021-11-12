@@ -65,7 +65,7 @@ public class ListenerRegister {
         }
     }
 
-    private void unregisterListeners(GameInstance gameInstance) {
+    public void unregisterListeners(GameInstance gameInstance) {
         HandlerList.unregisterAll(gameInstance);
     }
 
