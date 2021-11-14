@@ -10,6 +10,7 @@ sourceCompatibility = targetCompatibility = JavaVersion.VERSION_16
 
 repositories {
     mavenCentral()
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/public/' }
     maven { url "https://repo.aikar.co/content/groups/aikar/" }
     maven { url "https://papermc.io/repo/repository/maven-public/" }
 }
@@ -32,6 +33,10 @@ dependencies {
 
 /* TEST DEPENDENCIES */
 dependencies {
+    testCompileOnly 'io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT'
+    testImplementation 'com.github.seeseemelk:MockBukkit-v1.17:1.7.0'
+
+
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'

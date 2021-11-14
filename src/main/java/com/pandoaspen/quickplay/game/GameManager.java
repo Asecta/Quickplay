@@ -9,7 +9,7 @@ import java.util.Set;
 public class GameManager {
 
     private Set<GameInstance> gameInstances;
-    private Map<World, GameInstance> worldGameInstanceMap;
 
+    private Map<World, GameInstance> worldGameInstanceMap;
 
 }

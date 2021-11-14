@@ -3,11 +3,11 @@ package com.pandoaspen.quickplay.game.instances;
 import com.pandoaspen.quickplay.QuickplayPlugin;
 import com.pandoaspen.quickplay.game.gamemodes.IGamemode;
 import com.pandoaspen.quickplay.game.maps.IMap;
-import com.pandoaspen.quickplay.listenerfactory.ContextAwareListener;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import com.pandoaspen.quickplay.listenerdecorator.ContextAwareListener;
+import lombok.*;
 import org.bukkit.World;
-import org.bukkit.event.Listener;
+
+import java.util.UUID;
 
 @RequiredArgsConstructor
 public class GameInstance implements ContextAwareListener {
@@ -17,7 +17,11 @@ public class GameInstance implements ContextAwareListener {
     @Getter private final IMap map;
     @Getter private final World world;
 
-    @Getter private boolean running = false;
+    @Getter private final UUID uuid = UUID.randomUUID();
+
+    @Setter
+    @Getter
+    private boolean running = false;
 
     public void tick() {
 
@@ -25,6 +29,6 @@ public class GameInstance implements ContextAwareListener {
 
     @Override
     public String toString() {
-        return "GameInstance{" + "plugin=" + plugin + ", gamemode=" + gamemode + ", map=" + map + ", world=" + world + '}';
+        return "GameInstance{uuid=" + uuid + "}";
     }
 }

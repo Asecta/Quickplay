@@ -1,4 +1,4 @@
-package com.pandoaspen.quickplay.listenerfactory;
+package com.pandoaspen.quickplay.listenerdecorator;
 
 import org.bukkit.event.Listener;
 

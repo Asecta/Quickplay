@@ -1,10 +1,20 @@
 package com.pandoaspen.quickplay;
 
-import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerAnimationEvent;
+import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.java.JavaPluginLoader;
+import org.jetbrains.annotations.NotNull;
+
+import java.io.File;
 
 public class QuickplayPlugin extends JavaPlugin {
+
+    public QuickplayPlugin() {
+    }
+
+    protected QuickplayPlugin(@NotNull final JavaPluginLoader loader, @NotNull final PluginDescriptionFile description, @NotNull final File dataFolder, @NotNull final File file) {
+        super(loader, description, dataFolder, file);
+    }
 
     @Override
     public void onEnable() {
@@ -13,10 +23,10 @@ public class QuickplayPlugin extends JavaPlugin {
     }
 
     private void setupCommands() {
-
+        getLogger().info("Setting up commands...");
     }
 
     private void setupListeners() {
-        getServer().getPluginManager().registerEvents(new TestListener(this), this);
+
     }
 }

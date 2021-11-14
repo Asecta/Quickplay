@@ -4,7 +4,7 @@ import com.pandoaspen.quickplay.QuickplayPlugin;
 import com.pandoaspen.quickplay.game.GameManager;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import org.bukkit.Server;
+import lombok.Setter;
 
 @RequiredArgsConstructor
 public abstract class AbstractGamemode implements IGamemode {
@@ -13,7 +13,10 @@ public abstract class AbstractGamemode implements IGamemode {
     @Getter private final GameManager gameManager;
 
     @Getter private String name;
-    @Getter private GameState state;
+
+    @Getter
+    @Setter
+    private GameState state = GameState.PREGAME;
 
     @Override
     public void tick() {

@@ -1,4 +1,4 @@
-package com.pandoaspen.quickplay.listenerfactory;
+package com.pandoaspen.quickplay.listenerdecorator;
 
 import com.pandoaspen.quickplay.game.gamemodes.GameState;
 import org.bukkit.event.EventPriority;
